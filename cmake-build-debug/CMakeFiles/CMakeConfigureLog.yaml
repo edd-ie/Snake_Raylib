@@ -415,3 +415,114 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "lib/raylib/cmake/AddIfFlagCompiles.cmake:3 (CHECK_C_COMPILER_FLAG)"
+      - "lib/raylib/cmake/CompilerFlags.cmake:5 (add_if_flag_compiles)"
+      - "lib/raylib/CMakeLists.txt:29 (include)"
+    checks:
+      - "Performing Test COMPILER_HAS_THOSE_TOGGLES"
+    directories:
+      source: "X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kzygvq"
+      binary: "X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kzygvq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "X:/Code/C++/SnakeRaylib/lib/raylib/cmake"
+    buildResult:
+      variable: "COMPILER_HAS_THOSE_TOGGLES"
+      cached: true
+      stdout: |
+        Change Dir: 'X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kzygvq'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_1d62b
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCOMPILER_HAS_THOSE_TOGGLES  -fdiagnostics-color=always   -Werror=pointer-arith -o CMakeFiles/cmTC_1d62b.dir/src.c.obj -c X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kzygvq/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_1d62b.dir/src.c.obj -o cmTC_1d62b.exe -Wl,--out-implib,libcmTC_1d62b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "lib/raylib/src/external/glfw/CMakeLists.txt:64 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ysakgh"
+      binary: "X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ysakgh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_MODULE_PATH: "X:/Code/C++/SnakeRaylib/lib/raylib/cmake;X:/Code/C++/SnakeRaylib/lib/raylib/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ysakgh'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_0bc43
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -fdiagnostics-color=always -o CMakeFiles/cmTC_0bc43.dir/src.c.obj -c X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ysakgh/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  CMakeFiles/cmTC_0bc43.dir/src.c.obj -o cmTC_0bc43.exe -Wl,--out-implib,libcmTC_0bc43.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "lib/raylib/src/external/glfw/src/CMakeLists.txt:291 (check_include_file)"
+    checks:
+      - "Looking for dinput.h"
+    directories:
+      source: "X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4m9j56"
+      binary: "X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4m9j56"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "X:/Code/C++/SnakeRaylib/lib/raylib/cmake;X:/Code/C++/SnakeRaylib/lib/raylib/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "DINPUT_H_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4m9j56'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_7d67e
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -fdiagnostics-color=always -o CMakeFiles/cmTC_7d67e.dir/CheckIncludeFile.c.obj -c X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4m9j56/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  CMakeFiles/cmTC_7d67e.dir/CheckIncludeFile.c.obj -o cmTC_7d67e.exe -Wl,--out-implib,libcmTC_7d67e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "lib/raylib/src/external/glfw/src/CMakeLists.txt:292 (check_include_file)"
+    checks:
+      - "Looking for xinput.h"
+    directories:
+      source: "X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s0v5zd"
+      binary: "X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s0v5zd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "X:/Code/C++/SnakeRaylib/lib/raylib/cmake;X:/Code/C++/SnakeRaylib/lib/raylib/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "XINPUT_H_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s0v5zd'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_36bdc
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -fdiagnostics-color=always -o CMakeFiles/cmTC_36bdc.dir/CheckIncludeFile.c.obj -c X:/Code/C++/SnakeRaylib/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s0v5zd/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  CMakeFiles/cmTC_36bdc.dir/CheckIncludeFile.c.obj -o cmTC_36bdc.exe -Wl,--out-implib,libcmTC_36bdc.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
