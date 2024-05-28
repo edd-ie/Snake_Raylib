@@ -10,16 +10,27 @@
 class Food
 {
     Vector2 pos{};
+    Texture2D texture;
 
 public:
     Food()
     {
         pos = {5,6};
+
+        const Image image = LoadImage("../graphics/food.png");
+        texture = LoadTextureFromImage(image);
+        UnloadImage(image);
+    }
+
+    ~Food()
+    {
+        UnloadTexture(texture);
     }
 
     void Draw() const
     {
-        DrawRectangle(pos.x*cellSize, pos.y*cellSize, cellSize, cellSize, darkGreen);
+        // DrawRectangle(pos.x*cellSize, pos.y*cellSize, cellSize, cellSize, darkGreen);
+        DrawTexture(texture, pos.x*cellSize, pos.y*cellSize, WHITE);
     }
 };
 

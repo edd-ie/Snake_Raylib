@@ -133,7 +133,7 @@ struct android_app *GetAndroidApp(void)
 }
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and Graphics Device
+// Module Functions Definition: Window and graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close

@@ -1,5 +1,5 @@
         <!-------------------------------------------------------------------------------------- -->
-        <!-- Window and Graphics Device Functions (Module: core) -->
+        <!-- Window and graphics Device Functions (Module: core) -->
         <!-------------------------------------------------------------------------------------- -->
 
         <!-- Window-related functions -->
@@ -2822,7 +2822,7 @@
                 <Param name="Vector2 size" />
                 <Param name="Vector2 origin" />
                 <Param name="float rotation" />
-                <Param name="0ó¿8± " />
+                <Param name="0ï¿½8ï¿½ " />
             </Overload>
         </KeyWord>
 

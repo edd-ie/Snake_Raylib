@@ -139,7 +139,7 @@ static void JoystickCallback(int jid, int event);                               
 // NOTE: Functions declaration is provided by raylib.h
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and Graphics Device
+// Module Functions Definition: Window and graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close
@@ -1493,7 +1493,7 @@ int InitPlatform(void)
         // to be activated on web platforms since VSync is enforced there.
         if (CORE.Window.flags & FLAG_VSYNC_HINT)
         {
-            // WARNING: It seems to hit a critical render path in Intel HD Graphics
+            // WARNING: It seems to hit a critical render path in Intel HD graphics
             glfwSwapInterval(1);
             TRACELOG(LOG_INFO, "DISPLAY: Trying to enable VSYNC");
         }

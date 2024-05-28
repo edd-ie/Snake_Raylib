@@ -497,7 +497,7 @@ const char *TextFormat(const char *text, ...);              // Formatting of tex
 #endif
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and Graphics Device
+// Module Functions Definition: Window and graphics Device
 //----------------------------------------------------------------------------------
 
 // NOTE: Functions with a platform-specific implementation on rcore_<platform>.c

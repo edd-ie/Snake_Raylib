@@ -228,7 +228,7 @@ static KeyboardKey ConvertScancodeToKey(SDL_Scancode sdlScancode);  // Help conv
 // NOTE: Functions declaration is provided by raylib.h
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and Graphics Device
+// Module Functions Definition: Window and graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close

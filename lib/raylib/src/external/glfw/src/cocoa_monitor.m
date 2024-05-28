@@ -150,7 +150,7 @@ static GLFWbool modeIsGood(CGDisplayModeRef mode)
     return GLFW_TRUE;
 }
 
-// Convert Core Graphics display mode to GLFW video mode
+// Convert Core graphics display mode to GLFW video mode
 //
 static GLFWvidmode vidmodeFromCGDisplayMode(CGDisplayModeRef mode,
                                             double fallbackRefreshRate)

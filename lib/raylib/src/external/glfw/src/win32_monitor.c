@@ -285,11 +285,11 @@ void _glfwSetVideoModeWin32(_GLFWmonitor* monitor, const GLFWvidmode* desired)
         else if (result == DISP_CHANGE_BADFLAGS)
             description = "Invalid flags";
         else if (result == DISP_CHANGE_BADMODE)
-            description = "Graphics mode not supported";
+            description = "graphics mode not supported";
         else if (result == DISP_CHANGE_BADPARAM)
             description = "Invalid parameter";
         else if (result == DISP_CHANGE_FAILED)
-            description = "Graphics mode failed";
+            description = "graphics mode failed";
         else if (result == DISP_CHANGE_NOTUPDATED)
             description = "Failed to write to registry";
         else if (result == DISP_CHANGE_RESTART)

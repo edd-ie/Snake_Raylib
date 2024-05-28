@@ -203,7 +203,7 @@ static int FindNearestConnectorMode(const drmModeConnector *connector, uint widt
 // NOTE: Functions declaration is provided by raylib.h
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and Graphics Device
+// Module Functions Definition: Window and graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close

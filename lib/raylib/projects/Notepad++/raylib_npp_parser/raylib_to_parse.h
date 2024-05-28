@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------------
-// Window and Graphics Device Functions (Module: core)
+// Window and graphics Device Functions (Module: core)
 //------------------------------------------------------------------------------------
 
 // Window-related functions

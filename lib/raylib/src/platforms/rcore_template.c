@@ -80,7 +80,7 @@ bool InitGraphicsDevice(void);   // Initialize graphics device
 // NOTE: Functions declaration is provided by raylib.h
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and Graphics Device
+// Module Functions Definition: Window and graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close
