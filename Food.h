@@ -10,12 +10,20 @@
 class Food
 {
     Vector2 pos{};
-    Texture2D texture;
+    Texture2D texture{};
+
+    static Vector2 GenerateRandomPos()
+    {
+        float x = GetRandomValue(0.0f, cellCount-1);
+        float y = GetRandomValue(0.0f, cellCount-1);
+
+        return Vector2{x, y};
+    }
 
 public:
     Food()
     {
-        pos = {5,6};
+        pos = GenerateRandomPos();
 
         const Image image = LoadImage("../graphics/food.png");
         texture = LoadTextureFromImage(image);
@@ -29,7 +37,6 @@ public:
 
     void Draw() const
     {
-        // DrawRectangle(pos.x*cellSize, pos.y*cellSize, cellSize, cellSize, darkGreen);
         DrawTexture(texture, pos.x*cellSize, pos.y*cellSize, WHITE);
     }
 };

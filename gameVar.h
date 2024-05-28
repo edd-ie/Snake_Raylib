@@ -14,6 +14,6 @@ inline Color darkGreen = {43, 51, 24, 255};
 
 // Game grid:
 inline int cellSize = 30;
-inline int cellCount = 24;
+inline int cellCount = 20;
 
 #endif //GAMEVAR_H
