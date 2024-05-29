@@ -40,8 +40,36 @@ public:
      */
     void Update()
     {
-        body.pop_back();
-        body.push_front(Vector2Add(body[0],direction));
+        if(!paused){
+            body.pop_back();
+            body.push_front(Vector2Add(body[0],direction));
+        }
+    }
+
+
+    void changeDirection()
+    {
+        if(!paused){
+            if((IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W)) && direction.y != 1)
+            {
+                direction = Vector2{0,-1};
+            }
+
+            if((IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_S)) && direction.y != -1)
+            {
+                direction = Vector2{0,1};
+            }
+
+            if((IsKeyPressed(KEY_LEFT) || IsKeyPressed(KEY_A)) && direction.x != 1)
+            {
+                direction = Vector2{-1,0};
+            }
+
+            if((IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_D)) && direction.x != -1)
+            {
+                direction = Vector2{1,0};
+            }
+        }
     }
 
 };

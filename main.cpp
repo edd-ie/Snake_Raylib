@@ -21,13 +21,23 @@ int main()
         BeginDrawing();
         ClearBackground(green);
 
+        // Object rendering
         food.Draw();
         snake.Draw();
 
+        // Snake motion
         if(eventTriggered(snakeUpdateInterval))
         {
             snake.Update();
         }
+
+        //Event listeners
+        if(IsKeyPressed(KEY_SPACE))
+        {
+            paused = !paused;
+        }
+
+        snake.changeDirection();
 
         EndDrawing();
     }

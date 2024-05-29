@@ -8,6 +8,9 @@
 //Game Fps
 inline int game_fps = 30;
 
+//Game state
+inline bool paused = false;
+
 // Game theme:
 inline Color green = {173,204,96,255};
 inline Color darkGreen = {43, 51, 24, 255};
