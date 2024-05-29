@@ -6,7 +6,7 @@
 #define GAMEVAR_H
 
 //Game Fps
-inline int game_fps = 30;
+inline int game_fps = 45;
 
 //Game state
 inline bool paused = false;
@@ -21,7 +21,7 @@ inline int cellCount = 30;
 
 // Game actions timer
 inline double lastUpdatetime = 0;
-inline double snakeUpdateInterval = 0.3; //seconds
+inline double snakeUpdateInterval = 0.2; //seconds
 
 
 #endif //GAMEVAR_H

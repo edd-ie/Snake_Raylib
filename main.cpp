@@ -16,11 +16,7 @@ int main()
     {
         BeginDrawing();
 
-        game.Draw();
-
         game.Actions();
-
-        game.checkKeyPresses();
 
         EndDrawing();
     }

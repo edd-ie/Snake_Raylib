@@ -49,11 +49,17 @@ public:
 
     void Actions()
     {
+        //Drawing on the canvas
+        Draw();
+
         // Snake motion
         if(eventTriggered(snakeUpdateInterval))
         {
             snake.Update();
         }
+
+        // Event Listeners
+        checkKeyPresses();
     }
 
     void checkKeyPresses()
