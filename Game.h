@@ -4,41 +4,14 @@
 
 #ifndef GAME_H
 #define GAME_H
+
 #include "raylib.h"
+#include "gameVar.h"
+#include "Snake.h"
+#include "Food.h"
 
-struct Game{
-
-    //Game Fps
-    int game_fps;
-
-    //Game state
-    bool paused;
-
-    // Game theme:
-    Color green;
-    Color darkGreen;
-
-    // Game grid:
-    int cellSize;
-    int cellCount;
-
-    // Game actions timer
-    double lastUpdatetime;
-    double snakeUpdateInterval; //seconds
-
-    Game(){
-        game_fps = 30;
-        paused = false;
-        green = {173,204,96,255};
-        darkGreen = {43, 51, 24, 255};
-        cellSize = 20;
-        cellCount = 30;
-        lastUpdatetime = 0;
-        snakeUpdateInterval = 0.3; //seconds
-    }
-
-
-    bool eventTriggered(const double interval)
+class  Game{
+    static bool eventTriggered(const double interval)
     {
         if(const double currentTime = GetTime(); currentTime-lastUpdatetime >= interval)
         {
@@ -47,6 +20,55 @@ struct Game{
         }
         return false;
     }
+
+    static void changeFPS(const int fps)
+    {
+        game_fps = (fps>120) ? 120 :
+                    (fps < 12) ? 12: fps;
+    }
+
+public:
+    //Objects
+    Food food = Food();
+    Snake snake = Snake();
+
+    Game(){
+        SetTargetFPS(game_fps);
+    }
+
+
+    void Draw()
+    {
+        //Game Background
+        ClearBackground(green);
+
+        // Object rendering
+        food.Draw();
+        snake.Draw();
+    }
+
+    void Actions()
+    {
+        // Snake motion
+        if(eventTriggered(snakeUpdateInterval))
+        {
+            snake.Update();
+        }
+    }
+
+    void checkKeyPresses()
+    {
+        //Event listeners
+        if(IsKeyPressed(KEY_SPACE))
+        {
+            paused = !paused;
+        }
+
+        snake.changeDirection();
+    }
+
+
+
 
 };
 

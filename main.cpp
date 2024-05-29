@@ -2,8 +2,7 @@
 #include "raylib.h"
 
 #include  "gameVar.h"
-#include "Food.h"
-#include "Snake.h"
+#include  "Game.h"
 
 using namespace std;
 
@@ -11,33 +10,17 @@ using namespace std;
 int main()
 {
     InitWindow(cellSize*cellCount, cellSize*cellCount, "Vintage Snake");
-    SetTargetFPS(game_fps);
-
-    Food food = Food();
-    Snake snake = Snake();
+    Game game = Game();
 
     while (!WindowShouldClose())
     {
         BeginDrawing();
-        ClearBackground(green);
 
-        // Object rendering
-        food.Draw();
-        snake.Draw();
+        game.Draw();
 
-        // Snake motion
-        if(eventTriggered(snakeUpdateInterval))
-        {
-            snake.Update();
-        }
+        game.Actions();
 
-        //Event listeners
-        if(IsKeyPressed(KEY_SPACE))
-        {
-            paused = !paused;
-        }
-
-        snake.changeDirection();
+        game.checkKeyPresses();
 
         EndDrawing();
     }
