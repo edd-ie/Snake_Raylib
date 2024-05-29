@@ -1,7 +1,9 @@
 #include <iostream>
 #include "raylib.h"
+
 #include  "gameVar.h"
 #include "Food.h"
+#include "Snake.h"
 
 using namespace std;
 
@@ -12,6 +14,7 @@ int main()
     SetTargetFPS(game_fps);
 
     Food food = Food();
+    Snake snake = Snake();
 
     while (!WindowShouldClose())
     {
@@ -19,6 +22,7 @@ int main()
         ClearBackground(green);
 
         food.Draw();
+        snake.Draw();
 
         EndDrawing();
     }
