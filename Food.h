@@ -14,10 +14,10 @@ class Food
 
     static Vector2 GenerateRandomPos()
     {
-        float x = GetRandomValue(0.0f, cellCount-1);
-        float y = GetRandomValue(0.0f, cellCount-1);
+        int x = GetRandomValue(0, cellCount-1);
+        int y = GetRandomValue(0, cellCount-1);
 
-        return Vector2{x, y};
+        return Vector2{static_cast<float>(x), static_cast<float>(y)};
     }
 
 public:
@@ -37,7 +37,7 @@ public:
 
     void Draw() const
     {
-        DrawTexture(texture, pos.x*cellSize, pos.y*cellSize, WHITE);
+        DrawTexture(texture, static_cast<int>(pos.x)*cellSize, static_cast<int>(pos.y)*cellSize, WHITE);
     }
 };
 

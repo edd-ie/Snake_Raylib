@@ -16,4 +16,18 @@ inline Color darkGreen = {43, 51, 24, 255};
 inline int cellSize = 20;
 inline int cellCount = 30;
 
+// Game actions timer
+inline double lastUpdatetime = 0;
+inline double snakeUpdateInterval = 0.3; //seconds
+
+inline bool eventTriggered(const double interval)
+{
+    if(const double currentTime = GetTime(); currentTime-lastUpdatetime >= interval)
+    {
+        lastUpdatetime = currentTime;
+        return true;
+    }
+    return false;
+}
+
 #endif //GAMEVAR_H

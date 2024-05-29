@@ -24,6 +24,11 @@ int main()
         food.Draw();
         snake.Draw();
 
+        if(eventTriggered(snakeUpdateInterval))
+        {
+            snake.Update();
+        }
+
         EndDrawing();
     }
 
