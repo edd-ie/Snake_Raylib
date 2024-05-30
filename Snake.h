@@ -11,16 +11,22 @@
 
 class Snake
 {
-    std::deque<Vector2> body; //Linked list
+
     Rectangle segment{};
     Vector2 direction{};
 
 public:
+    std::deque<Vector2> body; //Linked list
     Snake()
     {
         body = {Vector2{6,9}, Vector2{5,9}, Vector2{4,9}};
         direction = Vector2(1,0); // Moves to the right
     }
+
+    // std::deque<Vector2> getBody()
+    // {
+    //     return body;
+    // }
 
     void Draw()
     {
@@ -38,18 +44,18 @@ public:
      * checks the direction
      * Adds a new node at the front in the direction specified
      */
-    void Update()
+    void Update(bool eaten)
     {
         if(!paused){
-            body.pop_back();
             body.push_front(Vector2Add(body[0],direction));
+            if(!eaten) body.pop_back();
         }
     }
 
 
     void changeDirection()
     {
-        if(!paused){
+        if(!paused && !gameOver){
             if((IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W)) && direction.y != 1)
             {
                 direction = Vector2{0,-1};
@@ -70,6 +76,43 @@ public:
                 direction = Vector2{1,0};
             }
         }
+    }
+
+
+    static bool bodyCollision(Vector2 node, std::deque<Vector2> body)
+    {
+        bool found = false;
+        for(unsigned int i = 0; i<body.size() && !found; i++)
+        {
+            found = Vector2Equals(node, body[i]);
+        }
+        return found;
+    }
+
+    void checkBorderCollision()
+    {
+        //x-axis & y-axis
+        if(body[0].x == static_cast<float>(cellCount) || body[0].x == -1 || body[0].y == static_cast<float>(cellCount) || body[0].y == -1)
+        {
+            gameOver = true;
+        }
+    }
+
+    void reset()
+    {
+        body = {Vector2{6,9}, Vector2{5,9}, Vector2{4,9}};
+        direction = Vector2(1,0); // Moves to the right
+    }
+
+    void checkBodyCollision()
+    {
+        std::deque<Vector2> copy = body;
+        copy.pop_front();
+        if(bodyCollision(body[0],copy))
+        {
+            gameOver = true;
+        }
+
     }
 
 };

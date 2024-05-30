@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    InitWindow(cellSize*cellCount, cellSize*cellCount, "Vintage Snake");
+    InitWindow((2*border)+cellSize*cellCount, (2*border)+cellSize*cellCount, "Vintage Snake");
     Game game = Game();
 
     while (!WindowShouldClose())

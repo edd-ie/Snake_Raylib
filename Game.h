@@ -29,8 +29,8 @@ class  Game{
 
 public:
     //Objects
-    Food food = Food();
     Snake snake = Snake();
+    Food food = Food(snake.body);
 
     Game(){
         SetTargetFPS(game_fps);
@@ -55,8 +55,12 @@ public:
         // Snake motion
         if(eventTriggered(snakeUpdateInterval))
         {
-            snake.Update();
+            checkSnakeCollision();
+            check_food_collision();
+            snake.Update(eatFood);
         }
+
+
 
         // Event Listeners
         checkKeyPresses();
@@ -71,10 +75,39 @@ public:
         }
 
         snake.changeDirection();
+
+        if (gameOver){
+            if(IsKeyPressed(KEY_A)||IsKeyPressed(KEY_D)||
+                IsKeyPressed(KEY_S)||IsKeyPressed(KEY_W) ||
+                IsKeyPressed(KEY_UP)||IsKeyPressed(KEY_DOWN)||
+                IsKeyPressed(KEY_LEFT)||IsKeyPressed(KEY_RIGHT)
+                ) gameOver = false;
+        }
     }
 
+    void check_food_collision()
+    {
+        if(Vector2Equals(snake.body[0], food.getPos()))
+        {
+            std::cout << "Eating";
+            food.setPos(snake.body);
+            eatFood = true;
+        }
+        else eatFood = false;
+    }
 
+    void checkSnakeCollision()
+    {
+        snake.checkBorderCollision();
+        snake.checkBodyCollision();
+        if(gameOver) GameOver();
+    }
 
+    void GameOver()
+    {
+        snake.reset();
+        Food::GenerateRandomPos(snake.body);
+    }
 
 };
 

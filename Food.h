@@ -12,18 +12,12 @@ class Food
     Vector2 pos{};
     Texture2D texture{};
 
-    static Vector2 GenerateRandomPos()
-    {
-        int x = GetRandomValue(0, cellCount-1);
-        int y = GetRandomValue(0, cellCount-1);
 
-        return Vector2{static_cast<float>(x), static_cast<float>(y)};
-    }
 
 public:
-    Food()
+    Food(const std::deque<Vector2>& snakeBody)
     {
-        pos = GenerateRandomPos();
+        pos = GenerateRandomPos(snakeBody);
 
         const Image image = LoadImage("../graphics/food.png");
         texture = LoadTextureFromImage(image);
@@ -35,9 +29,36 @@ public:
         UnloadTexture(texture);
     }
 
+    static Vector2 GenerateRandomPos(const std::deque<Vector2>& body)
+    {
+        int x = GetRandomValue(0, cellCount-1);
+        int y = GetRandomValue(0, cellCount-1);
+
+        Vector2 newPos = {static_cast<float>(x), static_cast<float>(y)};
+        while(Snake::bodyCollision(newPos, body))
+        {
+            x = GetRandomValue(0, cellCount-1);
+            y = GetRandomValue(0, cellCount-1);
+
+            newPos = {static_cast<float>(x), static_cast<float>(y)};
+        }
+
+        return newPos;
+    }
+
     void Draw() const
     {
         DrawTexture(texture, static_cast<int>(pos.x)*cellSize, static_cast<int>(pos.y)*cellSize, WHITE);
+    }
+
+    Vector2 getPos()
+    {
+        return pos;
+    }
+
+    void setPos(const std::deque<Vector2>& body)
+    {
+        pos = GenerateRandomPos(body);
     }
 };
 
