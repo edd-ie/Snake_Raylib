@@ -37,7 +37,7 @@ public:
     Game(){
         SetTargetFPS(game_fps);
         InitAudioDevice();
-        eatSound = LoadSound("../Audio/crunchy.wav");
+        eatSound = LoadSound("../Audio/hungry.wav");
         wallSound = LoadSound("../Audio/wall.mp3");
     }
 
