@@ -11,7 +11,7 @@
 *       - +25 controls provided (basic and advanced)
 *       - Styling system for colors, font and metrics
 *       - Icons supported, embedded as a 1-bit icons pack
-*       - Standalone mode option (custom input/graphics backend)
+*       - Standalone mode option (custom input/Graphics backend)
 *       - Multiple support tools provided for raygui development
 *
 *   POSSIBLE IMPROVEMENTS:

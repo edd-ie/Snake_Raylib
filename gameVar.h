@@ -15,6 +15,7 @@ inline bool gameOver = false;
 // Game theme:
 inline Color green = {173,204,96,255};
 inline Color darkGreen = {43, 51, 24, 255};
+inline const Image foodTexture = LoadImage("../Graphics/food.png");
 
 // Game grid:
 inline int cellSize = 20;

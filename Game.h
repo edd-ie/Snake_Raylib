@@ -31,9 +31,21 @@ public:
     //Objects
     Snake snake = Snake();
     Food food = Food(snake.body);
+    Sound eatSound;
+    Sound wallSound;
 
     Game(){
         SetTargetFPS(game_fps);
+        InitAudioDevice();
+        eatSound = LoadSound("../Audio/crunchy.wav");
+        wallSound = LoadSound("../Audio/wall.mp3");
+    }
+
+    ~Game()
+    {
+        UnloadSound(eatSound);
+        UnloadSound(wallSound);
+        CloseAudioDevice();
     }
 
     void displayText()
@@ -112,6 +124,7 @@ public:
             std::cout << "Eating";
             food.setPos(snake.body);
             eatFood = true;
+            PlaySound(eatSound);
             score++;
         }
         else eatFood = false;
@@ -121,14 +134,17 @@ public:
     {
         snake.checkBorderCollision();
         snake.checkBodyCollision();
-        if(gameOver) GameOver();
+        if(gameOver) {
+            // PlaySound(wallSound);
+            GameOver();
+        }
     }
 
     void GameOver()
     {
         snake.reset();
-        score = 0;
         Food::GenerateRandomPos(snake.body);
+        score = 0;
     }
 
 };

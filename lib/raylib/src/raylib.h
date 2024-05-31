@@ -943,7 +943,7 @@ typedef bool (*SaveFileTextCallback)(const char *fileName, char *text); // FileI
 // It's lonely here...
 
 //------------------------------------------------------------------------------------
-// Window and graphics Device Functions (Module: core)
+// Window and Graphics Device Functions (Module: core)
 //------------------------------------------------------------------------------------
 
 #if defined(__cplusplus)

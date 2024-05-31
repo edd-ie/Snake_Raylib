@@ -1,6 +1,6 @@
 /**********************************************************************************************
 *
-*   rcore_desktop_sdl - Functions to manage window, graphics device and inputs
+*   rcore_desktop_sdl - Functions to manage window, Graphics device and inputs
 *
 *   PLATFORM: DESKTOP: SDL
 *       - Windows (Win32, Win64)
@@ -217,7 +217,7 @@ static const int CursorsLUT[] = {
 //----------------------------------------------------------------------------------
 // Module Internal Functions Declaration
 //----------------------------------------------------------------------------------
-int InitPlatform(void);                                      // Initialize platform (graphics, inputs and more)
+int InitPlatform(void);                                      // Initialize platform (Graphics, inputs and more)
 void ClosePlatform(void);                                    // Close platform
 
 static KeyboardKey ConvertScancodeToKey(SDL_Scancode sdlScancode);  // Help convert SDL scancodes to raylib key
@@ -228,7 +228,7 @@ static KeyboardKey ConvertScancodeToKey(SDL_Scancode sdlScancode);  // Help conv
 // NOTE: Functions declaration is provided by raylib.h
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and graphics Device
+// Module Functions Definition: Window and Graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close
@@ -1209,7 +1209,7 @@ void PollInputEvents(void)
 // Module Internal Functions Definition
 //----------------------------------------------------------------------------------
 
-// Initialize platform: graphics, inputs and more
+// Initialize platform: Graphics, inputs and more
 int InitPlatform(void)
 {
     // Initialize SDL internal global state
@@ -1334,7 +1334,7 @@ int InitPlatform(void)
     }
     else
     {
-        TRACELOG(LOG_FATAL, "PLATFORM: Failed to initialize graphics device");
+        TRACELOG(LOG_FATAL, "PLATFORM: Failed to initialize Graphics device");
         return -1;
     }
 

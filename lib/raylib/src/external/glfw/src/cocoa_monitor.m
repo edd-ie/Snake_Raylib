@@ -150,7 +150,7 @@ static GLFWbool modeIsGood(CGDisplayModeRef mode)
     return GLFW_TRUE;
 }
 
-// Convert Core graphics display mode to GLFW video mode
+// Convert Core Graphics display mode to GLFW video mode
 //
 static GLFWvidmode vidmodeFromCGDisplayMode(CGDisplayModeRef mode,
                                             double fallbackRefreshRate)
@@ -326,14 +326,14 @@ void _glfwPollMonitorsCocoa(void)
             NSNumber* screenNumber = [screen deviceDescription][@"NSScreenNumber"];
 
             // HACK: Compare unit numbers instead of display IDs to work around
-            //       display replacement on machines with automatic graphics
+            //       display replacement on machines with automatic Graphics
             //       switching
             if (CGDisplayUnitNumber([screenNumber unsignedIntValue]) == unitNumber)
                 break;
         }
 
         // HACK: Compare unit numbers instead of display IDs to work around
-        //       display replacement on machines with automatic graphics
+        //       display replacement on machines with automatic Graphics
         //       switching
         uint32_t j;
         for (j = 0;  j < disconnectedCount;  j++)

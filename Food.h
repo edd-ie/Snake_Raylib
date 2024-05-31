@@ -19,9 +19,8 @@ public:
     {
         pos = GenerateRandomPos(snakeBody);
 
-        const Image image = LoadImage("../graphics/food.png");
-        texture = LoadTextureFromImage(image);
-        UnloadImage(image);
+        texture = LoadTextureFromImage(foodTexture);
+        UnloadImage(foodTexture);
     }
 
     ~Food()

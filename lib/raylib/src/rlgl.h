@@ -27,7 +27,7 @@
 *       #define GRAPHICS_API_OPENGL_43
 *       #define GRAPHICS_API_OPENGL_ES2
 *       #define GRAPHICS_API_OPENGL_ES3
-*           Use selected OpenGL graphics backend, should be supported by platform
+*           Use selected OpenGL Graphics backend, should be supported by platform
 *           Those preprocessor defines are only used on rlgl module, if OpenGL version is
 *           required by any other module, use rlGetVersion() to check it
 *
@@ -730,7 +730,7 @@ RLAPI void rlSetShader(unsigned int id, int *locs);                             
 
 // Compute shader management
 RLAPI unsigned int rlLoadComputeShaderProgram(unsigned int shaderId);           // Load compute shader program
-RLAPI void rlComputeShaderDispatch(unsigned int groupX, unsigned int groupY, unsigned int groupZ);  // Dispatch compute shader (equivalent to *draw* for graphics pipeline)
+RLAPI void rlComputeShaderDispatch(unsigned int groupX, unsigned int groupY, unsigned int groupZ);  // Dispatch compute shader (equivalent to *draw* for Graphics pipeline)
 
 // Shader buffer storage object management (ssbo)
 RLAPI unsigned int rlLoadShaderBuffer(unsigned int size, const void *data, int usageHint); // Load shader storage buffer object (SSBO)
@@ -4186,7 +4186,7 @@ unsigned int rlLoadComputeShaderProgram(unsigned int shaderId)
     return program;
 }
 
-// Dispatch compute shader (equivalent to *draw* for graphics pilepine)
+// Dispatch compute shader (equivalent to *draw* for Graphics pilepine)
 void rlComputeShaderDispatch(unsigned int groupX, unsigned int groupY, unsigned int groupZ)
 {
 #if defined(GRAPHICS_API_OPENGL_43)

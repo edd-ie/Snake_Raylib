@@ -211,7 +211,7 @@ ifeq ($(PLATFORM),PLATFORM_ANDROID)
 
 endif
 
-# Define raylib graphics api depending on selected platform
+# Define raylib Graphics api depending on selected platform
 ifeq ($(PLATFORM),PLATFORM_DESKTOP)
     # By default use OpenGL 3.3 on desktop platforms
     GRAPHICS ?= GRAPHICS_API_OPENGL_33

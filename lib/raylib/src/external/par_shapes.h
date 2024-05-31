@@ -128,7 +128,7 @@ par_shapes_mesh* par_shapes_create_empty();
 // level scales the number of triangles by four, so use a very low number.
 par_shapes_mesh* par_shapes_create_rock(int seed, int nsubdivisions);
 
-// Create trees or vegetation by executing a recursive turtle graphics program.
+// Create trees or vegetation by executing a recursive turtle Graphics program.
 // The program is a list of command-argument pairs.  See the unit test for
 // an example.  Texture coordinates and normals are not generated.
 par_shapes_mesh* par_shapes_create_lsystem(char const* program, int slices,

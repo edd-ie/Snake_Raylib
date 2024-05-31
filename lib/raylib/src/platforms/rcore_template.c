@@ -1,6 +1,6 @@
 /**********************************************************************************************
 *
-*   rcore_<platform> template - Functions to manage window, graphics device and inputs
+*   rcore_<platform> template - Functions to manage window, Graphics device and inputs
 *
 *   PLATFORM: <PLATFORM>
 *       - TODO: Define the target platform for the core
@@ -71,8 +71,8 @@ static PlatformData platform = { 0 };   // Platform specific data
 //----------------------------------------------------------------------------------
 // Module Internal Functions Declaration
 //----------------------------------------------------------------------------------
-int InitPlatform(void);          // Initialize platform (graphics, inputs and more)
-bool InitGraphicsDevice(void);   // Initialize graphics device
+int InitPlatform(void);          // Initialize platform (Graphics, inputs and more)
+bool InitGraphicsDevice(void);   // Initialize Graphics device
 
 //----------------------------------------------------------------------------------
 // Module Functions Declaration
@@ -80,7 +80,7 @@ bool InitGraphicsDevice(void);   // Initialize graphics device
 // NOTE: Functions declaration is provided by raylib.h
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and graphics Device
+// Module Functions Definition: Window and Graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close
@@ -428,7 +428,7 @@ void PollInputEvents(void)
 // Module Internal Functions Definition
 //----------------------------------------------------------------------------------
 
-// Initialize platform: graphics, inputs and more
+// Initialize platform: Graphics, inputs and more
 int InitPlatform(void)
 {
     // TODO: Initialize graphic device: display/window
@@ -536,7 +536,7 @@ int InitPlatform(void)
     }
     else
     {
-        TRACELOG(LOG_FATAL, "PLATFORM: Failed to initialize graphics device");
+        TRACELOG(LOG_FATAL, "PLATFORM: Failed to initialize Graphics device");
         return -1;
     }
     //----------------------------------------------------------------------------
@@ -585,7 +585,7 @@ int InitPlatform(void)
 // Close platform
 void ClosePlatform(void)
 {
-    // TODO: De-initialize graphics, inputs and more
+    // TODO: De-initialize Graphics, inputs and more
 }
 
 // EOF

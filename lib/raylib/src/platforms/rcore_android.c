@@ -1,6 +1,6 @@
 /**********************************************************************************************
 *
-*   rcore_android - Functions to manage window, graphics device and inputs
+*   rcore_android - Functions to manage window, Graphics device and inputs
 *
 *   PLATFORM: ANDROID
 *       - Android (ARM, ARM64)
@@ -80,7 +80,7 @@ static PlatformData platform = { 0 };   // Platform specific data
 //----------------------------------------------------------------------------------
 // Module Internal Functions Declaration
 //----------------------------------------------------------------------------------
-int InitPlatform(void);          // Initialize platform (graphics, inputs and more)
+int InitPlatform(void);          // Initialize platform (Graphics, inputs and more)
 void ClosePlatform(void);        // Close platform
 
 static void AndroidCommandCallback(struct android_app *app, int32_t cmd);           // Process Android activity lifecycle commands
@@ -133,7 +133,7 @@ struct android_app *GetAndroidApp(void)
 }
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and graphics Device
+// Module Functions Definition: Window and Graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close
@@ -515,7 +515,7 @@ void PollInputEvents(void)
 // Module Internal Functions Definition
 //----------------------------------------------------------------------------------
 
-// Initialize platform: graphics, inputs and more
+// Initialize platform: Graphics, inputs and more
 int InitPlatform(void)
 {
     // Initialize display basic configuration
@@ -783,7 +783,7 @@ static void AndroidCommandCallback(struct android_app *app, int32_t cmd)
                     CORE.Window.display.width = ANativeWindow_getWidth(platform.app->window);
                     CORE.Window.display.height = ANativeWindow_getHeight(platform.app->window);
 
-                    // Initialize graphics device (display device and OpenGL context)
+                    // Initialize Graphics device (display device and OpenGL context)
                     InitGraphicsDevice();
 
                     // Initialize OpenGL context (states and resources)

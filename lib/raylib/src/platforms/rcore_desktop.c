@@ -1,6 +1,6 @@
 /**********************************************************************************************
 *
-*   rcore_desktop - Functions to manage window, graphics device and inputs
+*   rcore_desktop - Functions to manage window, Graphics device and inputs
 *
 *   PLATFORM: DESKTOP: GLFW
 *       - Windows (Win32, Win64)
@@ -111,7 +111,7 @@ static PlatformData platform = { 0 };   // Platform specific data
 //----------------------------------------------------------------------------------
 // Module Internal Functions Declaration
 //----------------------------------------------------------------------------------
-int InitPlatform(void);          // Initialize platform (graphics, inputs and more)
+int InitPlatform(void);          // Initialize platform (Graphics, inputs and more)
 void ClosePlatform(void);        // Close platform
 
 // Error callback event
@@ -139,7 +139,7 @@ static void JoystickCallback(int jid, int event);                               
 // NOTE: Functions declaration is provided by raylib.h
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and graphics Device
+// Module Functions Definition: Window and Graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close
@@ -1240,7 +1240,7 @@ void PollInputEvents(void)
 // Module Internal Functions Definition
 //----------------------------------------------------------------------------------
 
-// Initialize platform: graphics, inputs and more
+// Initialize platform: Graphics, inputs and more
 int InitPlatform(void)
 {
     glfwSetErrorCallback(ErrorCallback);
@@ -1493,7 +1493,7 @@ int InitPlatform(void)
         // to be activated on web platforms since VSync is enforced there.
         if (CORE.Window.flags & FLAG_VSYNC_HINT)
         {
-            // WARNING: It seems to hit a critical render path in Intel HD graphics
+            // WARNING: It seems to hit a critical render path in Intel HD Graphics
             glfwSwapInterval(1);
             TRACELOG(LOG_INFO, "DISPLAY: Trying to enable VSYNC");
         }
@@ -1529,7 +1529,7 @@ int InitPlatform(void)
     }
     else
     {
-        TRACELOG(LOG_FATAL, "PLATFORM: Failed to initialize graphics device");
+        TRACELOG(LOG_FATAL, "PLATFORM: Failed to initialize Graphics device");
         return -1;
     }
 

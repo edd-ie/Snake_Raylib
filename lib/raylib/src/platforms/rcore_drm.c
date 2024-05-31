@@ -1,6 +1,6 @@
 /**********************************************************************************************
 *
-*   rcore_drm - Functions to manage window, graphics device and inputs
+*   rcore_drm - Functions to manage window, Graphics device and inputs
 *
 *   PLATFORM: DRM
 *       - Raspberry Pi 0-5 (DRM/KMS)
@@ -176,7 +176,7 @@ static const int EvkeyToUnicodeLUT[] = {
 //----------------------------------------------------------------------------------
 // Module Internal Functions Declaration
 //----------------------------------------------------------------------------------
-int InitPlatform(void);          // Initialize platform (graphics, inputs and more)
+int InitPlatform(void);          // Initialize platform (Graphics, inputs and more)
 void ClosePlatform(void);        // Close platform
 
 static void InitKeyboard(void);                 // Initialize raw keyboard system
@@ -203,7 +203,7 @@ static int FindNearestConnectorMode(const drmModeConnector *connector, uint widt
 // NOTE: Functions declaration is provided by raylib.h
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and graphics Device
+// Module Functions Definition: Window and Graphics Device
 //----------------------------------------------------------------------------------
 
 // Check if application should close
@@ -787,7 +787,7 @@ void PollInputEvents(void)
 // Module Internal Functions Definition
 //----------------------------------------------------------------------------------
 
-// Initialize platform: graphics, inputs and more
+// Initialize platform: Graphics, inputs and more
 int InitPlatform(void)
 {
     platform.fd = -1;
@@ -1108,7 +1108,7 @@ int InitPlatform(void)
     }
     else
     {
-        TRACELOG(LOG_FATAL, "PLATFORM: Failed to initialize graphics device");
+        TRACELOG(LOG_FATAL, "PLATFORM: Failed to initialize Graphics device");
         return -1;
     }
 

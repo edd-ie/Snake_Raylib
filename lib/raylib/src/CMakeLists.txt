@@ -43,7 +43,7 @@ if (NOT ${PLATFORM} MATCHES "Web")
 endif ()
 
 # Sets additional platform options and link libraries for each platform
-# also selects the proper graphics API and version for that platform
+# also selects the proper Graphics API and version for that platform
 # Produces a variable LIBS_PRIVATE that will be used later
 include(LibraryConfigurations)
 

@@ -144,7 +144,7 @@
          values before combining them, and then dividing by the alpha value at the
          end.
 
-         The computer graphics industry introduced a technique called "premultiplied
+         The computer Graphics industry introduced a technique called "premultiplied
          alpha" or "associated alpha" in which image colors are stored in image files
          already multiplied by their alpha. This saves some math when compositing,
          and also avoids the need to divide by the alpha at the end (which is quite

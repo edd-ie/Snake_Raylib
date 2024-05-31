@@ -457,7 +457,7 @@ extern void LoadFontDefault(void);      // [Module: text] Loads default font on 
 extern void UnloadFontDefault(void);    // [Module: text] Unloads default font from GPU memory
 #endif
 
-extern int InitPlatform(void);          // Initialize platform (graphics, inputs and more)
+extern int InitPlatform(void);          // Initialize platform (Graphics, inputs and more)
 extern void ClosePlatform(void);        // Close platform
 
 static void InitTimer(void);                                // Initialize timer, hi-resolution if available (required by InitPlatform())
@@ -497,7 +497,7 @@ const char *TextFormat(const char *text, ...);              // Formatting of tex
 #endif
 
 //----------------------------------------------------------------------------------
-// Module Functions Definition: Window and graphics Device
+// Module Functions Definition: Window and Graphics Device
 //----------------------------------------------------------------------------------
 
 // NOTE: Functions with a platform-specific implementation on rcore_<platform>.c
