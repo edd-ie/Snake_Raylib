@@ -36,11 +36,31 @@ public:
         SetTargetFPS(game_fps);
     }
 
+    void displayText()
+    {
+        if(!paused)
+        {
+            DrawText("Vintage Snake",
+                static_cast<int>(offset)+10, 4, 25, darkGreen);
+        }
+
+        DrawText(TextFormat("Score = %i", score),
+                (cellSize*cellCount)-(static_cast<int>(offset)+40), 6, 22, darkGreen);
+    }
 
     void Draw()
     {
         //Game Background
         ClearBackground(green);
+
+        displayText();
+
+        //Renering the game borders
+        DrawRectangleLinesEx(Rectangle(border-offset,
+            border-offset,
+            static_cast<float>(cellSize*cellCount)+(offset*2),
+            static_cast<float>(cellSize*cellCount)+(offset*2)),
+            6,darkGreen);
 
         // Object rendering
         food.Draw();
@@ -92,6 +112,7 @@ public:
             std::cout << "Eating";
             food.setPos(snake.body);
             eatFood = true;
+            score++;
         }
         else eatFood = false;
     }
@@ -106,6 +127,7 @@ public:
     void GameOver()
     {
         snake.reset();
+        score = 0;
         Food::GenerateRandomPos(snake.body);
     }
 

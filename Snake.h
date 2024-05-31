@@ -32,8 +32,11 @@ public:
     {
         for(Vector2& i : body)
         {
-            segment = Rectangle(i.x*static_cast<float>(cellSize), i.y*static_cast<float>(cellSize),
-                static_cast<float>(cellSize), static_cast<float>(cellSize));
+            segment = Rectangle(border+i.x*static_cast<float>(cellSize),
+                border + i.y*static_cast<float>(cellSize),
+                static_cast<float>(cellSize),
+                static_cast<float>(cellSize));
+
             DrawRectangleRounded(segment, 0.5, 6, darkGreen);
         }
     }
@@ -44,7 +47,7 @@ public:
      * checks the direction
      * Adds a new node at the front in the direction specified
      */
-    void Update(bool eaten)
+    void Update(const bool eaten)
     {
         if(!paused){
             body.push_front(Vector2Add(body[0],direction));

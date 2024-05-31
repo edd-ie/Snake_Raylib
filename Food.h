@@ -48,7 +48,9 @@ public:
 
     void Draw() const
     {
-        DrawTexture(texture, static_cast<int>(pos.x)*cellSize, static_cast<int>(pos.y)*cellSize, WHITE);
+        DrawTexture(texture, static_cast<int>(border) + static_cast<int>(pos.x)*cellSize,
+            static_cast<int>(border) + static_cast<int>(pos.y)*cellSize,
+            WHITE);
     }
 
     Vector2 getPos()

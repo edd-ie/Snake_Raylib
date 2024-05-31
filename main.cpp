@@ -9,7 +9,9 @@ using namespace std;
 
 int main()
 {
-    InitWindow((2*border)+cellSize*cellCount, (2*border)+cellSize*cellCount, "Vintage Snake");
+    InitWindow(static_cast<int>(2*border)+cellSize*cellCount,
+        static_cast<int>(2*border)+cellSize*cellCount,
+        "Vintage Snake");
     Game game = Game();
 
     while (!WindowShouldClose())
